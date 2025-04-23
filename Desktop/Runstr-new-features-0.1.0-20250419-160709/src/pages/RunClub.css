@@ -1,0 +1,86 @@
+/* RunClub specific styles */
+
+.feed-header-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.feed-header-button h2 {
+  margin: 0;
+  color: var(--primary-text-color, #ffffff);
+}
+
+.feed-header-button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.feed-header-button:active {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(0.98);
+}
+
+.feed-header-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.feed-header-button .refresh-indicator {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+  font-size: 1.2rem;
+}
+
+.feed-header-button.refreshing h2 {
+  animation: pulse 1s infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Error and no posts messages */
+.error-message, .no-posts-message {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.error-buttons, .diagnostic-info {
+  margin-top: 12px;
+}
+
+.retry-button, .diagnose-button {
+  background-color: var(--primary-color, #3b82f6);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin: 0 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.retry-button:hover, .diagnose-button:hover {
+  background-color: var(--primary-color-dark, #2563eb);
+} 
